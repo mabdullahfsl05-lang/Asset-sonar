@@ -1,0 +1,16 @@
+https://ezo.io/assetsonar/blog/getting-started-with-ezo-assetsonar-a-step-by-step-guide-to-complete-it-asset-visibility/
+https://ezo.io/assetsonar/blog/how-to-install-the-assetsonar-itam-agent-on-your-computer-6a54a202c488/
+https://ezo.io/assetsonar/blog/getting-started-with-ezo-assetsonar-a-step-by-step-guide-to-complete-it-asset-visibility/#connect-mdm
+https://ezo.io/assetsonar/blog/open-audit-integration-for-network-discovery-b2d531e89c6f/
+https://ezo.io/assetsonar/blog/importing-items-into-assetsonar-119210bcabce/
+https://ezo.io/assetsonar/blog/peripheral-discovery/
+https://ezo.io/wp-content/uploads/2024/08/AssetSonar-Mobile-App-Getting-Started-Guide-1.pdf
+https://ezo.io/assetsonar/blog/types-of-members-a2c1dff4a399/
+https://ezo.io/assetsonar/blog/getting-started-with-ezo-assetsonar-a-step-by-step-guide-to-complete-it-asset-visibility/#add-users
+https://ezo.io/assetsonar/blog/enhanced-members-settings-7e9dae24c721/
+https://ezo.io/assetsonar/blog/custom-roles-26d7dfd8fe1b/
+https://ezo.io/assetsonar/blog/new-custom-roles-design-1429e605e9c/
+https://ezo.io/assetsonar/blog/advanced-access-control-97eaffce0454/
+https://ezo.io/assetsonar/blog/scim-user-provisioning-820ed93288a0/
+https://ezo.io/assetsonar/blog/scim-for-azure-ad-f21c5707af1/
+https://ezo.io/assetsonar/blog/scim-for-onelogin-dceb6917f195/
