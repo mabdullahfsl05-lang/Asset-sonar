@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Report Agent — Local CSV Insights</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
+<script src="plotly.min.js"></script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="panel-frame">
+
+  <header class="masthead">
+    <div class="mark">
+      <span class="mark-glyph">⌗</span>
+      <span class="mark-text">REPORT&nbsp;AGENT</span>
+    </div>
+    <div class="mark-sub">local model &middot; no data leaves this machine</div>
+  </header>
+
+  <main class="deck">
+
+    <!-- INPUT INSTRUMENT -->
+    <section class="instrument" id="input-instrument">
+      <div class="instrument-label">01 — LOAD</div>
+
+      <div class="dropzone" id="dropzone">
+        <input type="file" id="fileInput" accept=".csv" hidden>
+        <div class="dropzone-inner">
+          <div class="dropzone-icon">▤</div>
+          <div class="dropzone-text">
+            <strong id="dropzoneTitle">Drop a CSV, or click to browse</strong>
+            <span id="dropzoneMeta">No file loaded</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="instrument-label">02 — ASK</div>
+      <textarea id="queryInput" class="query-input" rows="2"
+        placeholder="e.g. Show total cost by vendor, sorted highest to lowest"></textarea>
+
+      <div class="controls-row">
+        <div class="select-wrap">
+          <label for="graphType">CHART</label>
+          <select id="graphType">
+            <option value="auto">Auto (agent decides)</option>
+            <option value="bar">Bar</option>
+            <option value="line">Line</option>
+            <option value="area">Area</option>
+            <option value="scatter">Scatter</option>
+            <option value="pie">Pie</option>
+            <option value="donut">Donut</option>
+            <option value="histogram">Histogram</option>
+            <option value="box">Box</option>
+          </select>
+        </div>
+
+        <button id="runBtn" class="run-btn" disabled>
+          <span class="run-btn-label">RUN</span>
+        </button>
+      </div>
+
+      <div class="status-line" id="statusLine" aria-live="polite"></div>
+    </section>
+
+    <!-- READOUT -->
+    <section class="instrument readout" id="readout" hidden>
+      <div class="instrument-label">03 — READOUT</div>
+
+      <div class="stat-strip" id="statStrip"></div>
+
+      <div class="graph-stage" id="graphStage"></div>
+
+      <div class="insight-block">
+        <div class="insight-label">FIELD NOTES</div>
+        <p class="insight-text" id="insightText"></p>
+      </div>
+
+      <details class="query-detail">
+        <summary>Generated SQL</summary>
+        <pre id="sqlText"></pre>
+      </details>
+
+      <details class="query-detail">
+        <summary>Raw result rows (<span id="rowCount">0</span>)</summary>
+        <div class="table-wrap"><table id="dataTable"></table></div>
+      </details>
+    </section>
+
+  </main>
+
+  <footer class="deck-footer">runs against a local Ollama model &middot; results are only as good as the model's SQL</footer>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
